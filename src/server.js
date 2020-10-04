@@ -16,6 +16,4 @@ server.get("/", (req, res) => {
 })
 
 
-server.listen(5000, () => {
-    console.log('Ta rodando')
-})
+server.listen(process.env.PORT || 5000)
