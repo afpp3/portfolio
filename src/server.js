@@ -4,7 +4,7 @@ const nunjucks = require('nunjucks')
 const server = express()
 
 server.use(express.static('public'))
-server.use(favicon('/public/favicon.ico'));
+
 // the __dirname is the current directory from where the script is running
 
 server.set('view engine', "html")
