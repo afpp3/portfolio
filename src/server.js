@@ -5,7 +5,7 @@ const favicon = require('serve-favicon');
 const server = express()
 
 server.use(express.static('public'))
-server.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.ico', 'favicon.png', 'favicon-32x32.png', 'favicon-96x96.png')));
+server.use(favicon(__dirname + '/public/img/favicon.ico'));
 // the __dirname is the current directory from where the script is running
 
 server.set('view engine', "html")
