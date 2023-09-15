@@ -17,16 +17,16 @@ type Props = {
 
 const { title, description, noindex, og } = Astro.props;
 
-const DEFAULT_TITLE_PAGE = "Astro - Portfolio template";
+const DEFAULT_TITLE_PAGE = "André Felippe - Portfolio";
 const DEFAULT_DESCRIPTION_PAGE =
-  "A minimal portfolio template built with Astro and Tailwindcss.";
+  "Prazer, sou André Felippe, desenvolvedor frontend há cerca de 2 anos, trabalho atualmente com React, Javascript, Typescript, Next, Tailwindcss, é um prazer ter você aqui!";
 const DEFAULT_URL_SITE = SITE_URL;
 
 const openGraph = {
   title: og?.title || DEFAULT_TITLE_PAGE,
   type: og?.type || "website",
-  image: og?.image || "/opengraph-image.jpg",
-  alt: og?.alt || "astro portfolio template image",
+  image: og?.image || "/opengraph-image.png",
+  alt: og?.alt || "portfolio andré felippe",
   url: DEFAULT_URL_SITE,
   description: og?.description || DEFAULT_DESCRIPTION_PAGE,
 };
@@ -49,11 +49,11 @@ const openGraph = {
       },
     }}
     twitter={{
-      creator: "@itsstormzz_",
+      creator: "@afpp3",
     }}
     extend={{
       link: [
-        { rel: "icon", href: "/favicon.svg" },
+        { rel: "icon", href: "/favicon.ico" },
         { rel: "sitemap", href: "/sitemap-index.xml" },
       ],
       meta: [
@@ -66,7 +66,7 @@ const openGraph = {
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: openGraph.title },
         { name: "twitter:description", content: openGraph.description },
-        { name: "twitter:site", content: "@itsstormzz_" },
+        { name: "twitter:site", content: "@afpp3" },
       ],
     }}
   />
