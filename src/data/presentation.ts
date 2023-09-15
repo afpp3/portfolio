@@ -11,22 +11,19 @@ type Presentation = {
 };
 
 const presentation: Presentation = {
-  mail: "maxencewolff.pro@gmail.com",
-  title: "Hi, I’m Maxence 👋",
+  mail: "afelipp3@gmail.com",
+  title: "Olá, sou o André Felippe 👋",
   description:
-    "Bonjour, i'm a *french frontend developer* with over *3 years* of web experience. I am currently working with *NextJS and Typescript*. Outside of work I complete my pokemon card collection and learning TypeScript.",
+    "Sou um *desenvolvedor frontend* há cerca de 2 anos, trabalho atualmente com *React, Javascript, Typescript, Next, Tailwindcss*, é um prazer ter você aqui",
   socials: [
     {
-      label: "Twiiter",
-      link: "https://twitter.com/itsstormzz_",
+      label: "Linkedin",
+      link: "https://linkedin.com/in/andre-felippe",
     },
-    {
-      label: "Bento",
-      link: "https://bento.me/m-wolff",
-    },
+
     {
       label: "Github",
-      link: "https://github.com/MaeWolff",
+      link: "https://github.com/afpp3",
     },
   ],
 };

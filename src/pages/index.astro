@@ -10,6 +10,9 @@ import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
 
 import presentation from "@/data/presentation";
 import projects from "@/data/projects";
+import { MAP_COLOR_VARIANT_TO_TEXT } from "@/utils/mapVariants";
+import theme from "@/data/theme";
+
 
 const posts = await getCollection("posts");
 ---
@@ -27,10 +30,10 @@ const posts = await getCollection("posts");
 
     <article class="flex flex-col gap-8">
       <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Latest posts</h3>
-        <Link href="/posts" label="See all posts" isUnderline target="_self" />
+        <h3 class="text-lg text-neutral-100">Últimas postagens</h3>
+        <Link href="/posts" label="Ver todos os posts" isUnderline target="_self" />
       </header>
-      {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
+      {posts.length === 0 && <p>Em breve, mantenha conectado 👀...</p>}
 
       <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
         {
@@ -52,10 +55,10 @@ const posts = await getCollection("posts");
     <article class="flex flex-col gap-8">
       <header class="flex w-full flex-row justify-between gap-2">
         <h3 class="text-lg text-neutral-100">
-          Selected projects ({projects.length})
+          Projetos ({projects.length})
         </h3>
       </header>
-      {projects.length === 0 && <p>Oops, I must work^^^^^</p>}
+      {projects.length === 0 && <p>Oops, tenho que escrever^^^^^</p>}
 
       <section class="flex flex-col gap-4">
         {
@@ -67,13 +70,13 @@ const posts = await getCollection("posts");
 
     <article class="flex flex-col gap-8">
       <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Get in touch</h3>
+        <h3 class="text-lg text-neutral-100">Contato</h3>
       </header>
       <p>
-        Email me at <Link
+        Me mande um email em: <Link
           href={`mailto:${presentation.mail}`}
           label={presentation.mail}
-        /> or follow me via my social links.
+        /> ou me siga nas redes sociais.
       </p>
 
       <SocialLinks />

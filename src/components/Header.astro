@@ -1,4 +1,6 @@
 ---
+import theme from "@/data/theme";
+import { MAP_COLOR_VARIANT_TO_TEXT } from "@/utils/mapVariants";
 import removeTrailingSlash from "@/utils/removeTrailingSlash";
 import presentation from "@/data/presentation";
 
@@ -17,7 +19,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
           href="/"
           class:list={{
             ["hover:text-neutral-100"]: true,
-            ["text-neutral-100"]: pathname === "/",
+            [MAP_COLOR_VARIANT_TO_TEXT[theme.colors.primary]]: pathname === "/",
           }}>Home</a
         >
       </li>
@@ -27,7 +29,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
           href="/posts"
           class:list={{
             ["hover:text-neutral-100"]: true,
-            ["text-neutral-100"]: pathname === "/posts",
+            [MAP_COLOR_VARIANT_TO_TEXT[theme.colors.primary]]: pathname === "/posts",
           }}>Posts</a
         >
       </li>

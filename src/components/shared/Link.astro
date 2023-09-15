@@ -1,4 +1,7 @@
 ---
+import theme from "@/data/theme";
+import { MAP_COLOR_VARIANT_TO_TEXT, MAP_COLOR_VARIANT_TO_HOVER } from "@/utils/mapVariants";
+
 import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a"> & {
@@ -12,8 +15,9 @@ const { label, isUnderline, ...props } = Astro.props;
 <a
   href={props.href}
   class:list={{
-    ["hover:text-neutral-100 cursor-pointer"]: true,
-    ["underline decoration-dashed underline-offset-8"]: isUnderline,
+    // []: true,
+    [`hover:${MAP_COLOR_VARIANT_TO_HOVER[theme.colors.primary]} cursor-pointer transition`]: true,
+    ["underline decoration-dashed underline-offset-8 transition"]: isUnderline,
   }}
   {...props}
   rel="noreferrer"
